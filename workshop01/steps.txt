@@ -1,0 +1,9 @@
+   51  docker build -t myapp .
+   52  docker images
+   53  docker network create mynet
+   54  docker network ls
+   55  docker network inspect mynet
+   56  docker run -d --network=mynet --name=mydb stackupiss/northwind-db:v1
+   76  docker run -d -e DB_USER=root -e DB_PASSWORD=changeit -p 3000:3000  --network=mynet --name=myapp myapp
+   82  docker volume create myvol
+   83  docker volume ls
